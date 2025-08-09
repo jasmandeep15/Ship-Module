@@ -1,0 +1,193 @@
+.location-tracker {
+  padding: 20px;
+  background: linear-gradient(to bottom, #f0f4f8, #d9eaf7);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #003366;
+  font-size: 32px;
+  margin: 0;
+}
+
+.time-display {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.search-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 30px;
+  border: 2px solid #007bff;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gates-overview {
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.gates-overview h2 {
+  color: #003366;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gate-card {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.gate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+}
+
+.gate-card h3 {
+  margin: 0 0 10px 0;
+  color: #003366;
+  font-size: 18px;
+}
+
+.gate-card p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.crew-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.crew-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.crew-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.crew-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.crew-header h3 {
+  margin: 0 0 5px 0;
+  color: #003366;
+  font-size: 20px;
+}
+
+.position {
+  background: #007bff;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.current-location {
+  font-size: 16px;
+  color: #333;
+}
+
+.current-location strong {
+  color: #007bff;
+}
+
+.location-history {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gate-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-indicator {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-indicator.passed {
+  background: #4caf50;
+  color: white;
+}
+
+.status-indicator.not-passed {
+  background: #f44336;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .crew-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gates-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
