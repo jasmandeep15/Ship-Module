@@ -8,7 +8,7 @@ import UnderMaintenance from "./pages/UnderMaintenance";
 import "./App.css";
 function App() {
   return (
-    <Router>
+    <Router basename="/Ship-Module">
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
